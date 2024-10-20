@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 69%, rgba(9,9,121,1) 94%);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+h1{
+    color:white;
+    opacity: .90;
+    text-transform: uppercase;
+    word-spacing:2px ;
+    text-align: center;
+}
+.displayContainer{
+    position: relative;
+    background-color: rgba(48, 25, 52);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    border-bottom: 0.2rem solid purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.display{
+    
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 1.03rem 1rem;
+    color: rgb(212, 212, 120);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    outline: none;
+    padding-right: 3.25rem;
+    
+
+}
+.display::placeholder{
+    cursor: copy;
+    color: rgb(212, 212, 120);
+    top: 50%;
+}
+.hidden{
+    display: none;
+
+}
+button img{ 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+button[data-copy]{position: relative;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
