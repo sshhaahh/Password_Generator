@@ -10,6 +10,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  
 }
 body{
     height: 100vh;
@@ -17,6 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     justify-content: center;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 69%, rgba(9,9,121,1) 94%);
 }
@@ -34,7 +36,7 @@ h1{
 .displayContainer{
     position: relative;
     background-color: rgba(48, 25, 52);
-    border-radius: 1rem;
+    border-radius: 1.3rem;
     margin: 1rem 0;
     border-bottom: 0.2rem solid purple;
     display: flex;
@@ -62,7 +64,8 @@ h1{
 .display::placeholder{
     cursor: copy;
     color: rgb(212, 212, 120);
-    top: 50%;
+    
+    font-size: 1.9rem;
 }
 .hidden{
     display: none;
@@ -77,4 +80,84 @@ button[data-copy]{position: relative;
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.input-container{
+    background-color: rgba(48, 25, 52);
+    border-radius: 1.3rem;
+    padding: 3.2rem;
+    color: rgb(239, 225, 225);
+    border-bottom: 0.2rem solid purple;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    gap: 1rem;
+ 
+}
+.length-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.length-container p:first-child{
+    font-size: 1.6rem;
+}
+.length-container p:last-child{
+    font-size: 1.6rem;
+    color: yellow;
+
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;    
+}
+[strenght-container]{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+[generate-btn]{
+    color: yellow;
+    font-size: 1.6rem;
+    background-color: purple;
+    border-radius: 1.3rem;
+    border-bottom: 0.2rem solid  rgb(212, 212, 120) ;
+    width: 100%;
+    padding: 0.9rem 0;
+    cursor:pointer;
+}
+.check{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    
+    gap: 0 1rem;
+}
+label{
+    cursor: pointer;
+}
+.check input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid cyan;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: '✔';
+    font-weight: 600;
+    position: absolute;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-13%);
+
 }

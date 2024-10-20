@@ -15,7 +15,7 @@ let symbols = ' ~`! @#$%^&*()_-+={[}]|\:;"<,>.?/';
 let password="";
 let passwordLength=10;
 let checkCount=1;
-
+setIndicator("#ccc");
 function handleSlider(){
     inputSlider.value=passwordLength;
     lengthDisplay.innerText=passwordLength;
@@ -145,6 +145,7 @@ generateBtn.addEventListener('click',()=>{
     }
 
     password="";
+    calcStrength();
     
     let arrFun=[];
     if(upperCase.checked){
