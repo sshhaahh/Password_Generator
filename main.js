@@ -73,17 +73,11 @@ function calcStrength(){
 }
 
 function shuffleString(str) {
-    // String ko ek array mein tod do
     let arr = str.split('');
-  
-    // Fisher-Yates shuffle algorithm se array ko shuffle karo
     for (let i = arr.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1)); // Random index select karo
-      // Swap the elements at index i and j
+      let j = Math.floor(Math.random() * (i + 1)); 
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-  
-    // Shuffle hone ke baad array ko wapas string mein convert karo
     return arr.join('');
   }
   
@@ -144,7 +138,7 @@ allCheckBox.forEach((checkBox) => {
 
 generateBtn.addEventListener('click',()=>{
     if(checkCount<=0){
-        
+        console.log("check the box");
         return;
     }
 
@@ -180,8 +174,6 @@ generateBtn.addEventListener('click',()=>{
 
         }
         let p=shuffleString(password);
-        console.log(typeof password);
-
     passwordDisplay.value=p;
     calcStrength();
 })
