@@ -19,10 +19,15 @@ setIndicator("#ccc");
 function handleSlider(){
     inputSlider.value=passwordLength;
     lengthDisplay.innerText=passwordLength;
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    
+    inputSlider.style.backgroundSize =((passwordLength - min) * 100) / (max - min) + "% 100%";
 }
 
 function setIndicator(color){
     indicator.style.backgroundColor = color;
+    indicator.style.boxShadow=`0px 0px 12px 1px ${color}`;
 }
 
 function getRndInteger(min , max){
@@ -136,8 +141,12 @@ allCheckBox.forEach((checkBox) => {
 })
 
 
+
 generateBtn.addEventListener('click',()=>{
-    if(checkCount<=0) return;
+    if(checkCount<=0){
+        
+        return;
+    }
 
     if(passwordLength<checkCount){
         passwordLength=checkCount;
@@ -145,7 +154,7 @@ generateBtn.addEventListener('click',()=>{
     }
 
     password="";
-    calcStrength();
+    
     
     let arrFun=[];
     if(upperCase.checked){
@@ -174,4 +183,5 @@ generateBtn.addEventListener('click',()=>{
         console.log(typeof password);
 
     passwordDisplay.value=p;
+    calcStrength();
 })
